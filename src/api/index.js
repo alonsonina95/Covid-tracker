@@ -9,7 +9,7 @@ export const fetchData = async (country) => {
     }
     try {
         // Interesting to destructure all the incoming data.... You need to know what kind of data are you getting (of course)
-        const { data: { confirmed, recovered, deaths, lastUpdate } } = await axios.get(url); 
+        const { data: { confirmed, recovered, deaths, lastUpdate } } = await axios.get(changeableUrl); 
         return { confirmed, recovered, deaths, lastUpdate };
     } catch (error) {
         console.log(error);

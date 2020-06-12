@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = 'http://covid19.mathdro.id/api';
+const url = 'https://covid19.mathdro.id/api';
 
 export const fetchData = async (country) => {
     let changeableUrl = url;
@@ -9,7 +9,8 @@ export const fetchData = async (country) => {
     }
     try {
         // Interesting to destructure all the incoming data.... You need to know what kind of data are you getting (of course)
-        const { data: { confirmed, recovered, deaths, lastUpdate } } = await axios.get(changeableUrl); 
+        const { data: { confirmed, recovered, deaths, lastUpdate } } = await axios.get(changeableUrl);
+        console.log(confirmed);
         return { confirmed, recovered, deaths, lastUpdate };
     } catch (error) {
         console.log(error);

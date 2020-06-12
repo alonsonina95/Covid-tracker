@@ -1,7 +1,7 @@
 {
   "homepage": "https://alonsonina95.github.io/Covid-tracker",
   "name": "coronavirus-update",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.9.14",
